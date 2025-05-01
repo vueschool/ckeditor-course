@@ -10,7 +10,7 @@ export default defineEventHandler(async () => {
     },
     auth: {
       collaboration: {
-        "<YOUR_DOCUMENT_ID>": {
+        "*": {
           role: "writer",
           permissions: ["comment:modify_all"],
         },
@@ -19,6 +19,7 @@ export default defineEventHandler(async () => {
     iat: Math.floor(Date.now() / 1000),
     exp: Math.floor(Date.now() / 1000) + 60 * 60,
   };
+
   return jwt.sign(tokenPayload, process.env.CKEDITOR_SECRET_KEY, {
     algorithm: "HS256",
   });
