@@ -513,9 +513,23 @@ const config = computed(() => {
       feeds: [
         {
           marker: "@",
-          feed: [
-            /* See: https://ckeditor.com/docs/ckeditor5/latest/features/mentions.html */
-          ],
+          dropdownLimit: 2,
+          minimumCharacters: 3,
+          feed: async (searchText) => {
+            const users = await $fetch("/api/users", {
+              query: { search: searchText },
+            });
+            return users.map((user) => ({
+              id: `@${user.username}`,
+              name: user.name,
+            }));
+          },
+          itemRenderer: (item) => {
+            const itemEl = document.createElement("div");
+            itemEl.classList.add("custom-item");
+            itemEl.textContent = item.name;
+            return itemEl;
+          },
         },
       ],
     },
