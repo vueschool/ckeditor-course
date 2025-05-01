@@ -59,8 +59,7 @@ const DOCUMENT_ID = "<YOUR_DOCUMENT_ID>";
  * Please update the following values with your tokens.
  * Instructions on how to obtain them: https://ckeditor.com/docs/trial/latest/guides/real-time/quick-start.html
  */
-const CLOUD_SERVICES_TOKEN_URL =
-  "https://_rz8mh6f6lp1.cke-cs.com/token/dev/f5bec2a290ca677fc23fdb7c20d494b77835fc51427a5ecabf9f2d6e6dee?limit=10";
+const CLOUD_SERVICES_TOKEN_URL = "http://localhost:3000/api/auth";
 const CLOUD_SERVICES_WEBSOCKET_URL = "wss://_rz8mh6f6lp1.cke-cs.com/ws";
 
 const editorToolbar = useTemplateRef("editorToolbarElement");
