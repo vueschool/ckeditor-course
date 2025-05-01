@@ -1,15 +1,12 @@
 # Build a Google Docs Clone with CKEditor in 30 Minutes
 
-[![Course cover image](https://vueschool.io/storage/media/58ff84f47ebaef23e32956097bf716eb/Google-Docs-Clone-with-CKEditor-in-30-Minutes-02.jpeg)
+[![Course cover image](https://vueschool.io/storage/media/58ff84f47ebaef23e32956097bf716eb/Google-Docs-Clone-with-CKEditor-in-30-Minutes-02.jpeg)](https://vueschool.io/courses/google-docs-clone-with-ckeditor-in-30-minutes)
 
 This repository contains the source code for [Build a Google Docs Clone with CKEditor in 30 Minutes](https://vueschool.io/courses/google-docs-clone-with-ckeditor-in-30-minutes) course.
 
-**Intrigued?**
-[Enroll now](https://vueschool.io/courses/the-complete-guide-to-data-fetching-in-nuxt)
-
 Build a feature-rich document editor in no time with CKEditor. Learn how to integrate enterprise-grade text editing capabilities (like rich text, real time collab, and image uploads) into your applications with minimal effort.
 
-Intrigued? [Go checkout the full course now! It's FREE!](https://vueschool.io/courses/google-docs-clone-with-ckeditor-in-30-minutes)
+Intrigued? [Checkout the full video 🎥 course now! It's FREE!](https://vueschool.io/courses/google-docs-clone-with-ckeditor-in-30-minutes)
 
 ## Setup
 
