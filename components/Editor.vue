@@ -632,3 +632,16 @@ function configUpdateAlert(config) {
   }
 }
 </script>
+
+<style scoped>
+@media (max-width: 1115px) {
+  :deep(.editor-container__sidebar) {
+    min-width: 0px;
+    width: 0px;
+    visibility: hidden;
+  }
+  :deep(.ck-editor__editable) {
+    min-width: 0 !important;
+  }
+}
+</style>

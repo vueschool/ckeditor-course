@@ -1,5 +1,5 @@
 <template>
   <div>
-    <Editor />
+    <Editor style="max-width: 100%" />
   </div>
 </template>
