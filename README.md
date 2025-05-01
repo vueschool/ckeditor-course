@@ -1,10 +1,19 @@
-# Nuxt Minimal Starter
+# Build a Google Docs Clone with CKEditor in 30 Minutes
 
-Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+[![Course cover image](https://vueschool.io/storage/media/58ff84f47ebaef23e32956097bf716eb/Google-Docs-Clone-with-CKEditor-in-30-Minutes-02.jpeg)
+
+This repository contains the source code for [Build a Google Docs Clone with CKEditor in 30 Minutes](https://vueschool.io/courses/google-docs-clone-with-ckeditor-in-30-minutes) course.
+
+**Intrigued?**
+[Enroll now](https://vueschool.io/courses/the-complete-guide-to-data-fetching-in-nuxt)
+
+Build a feature-rich document editor in no time with CKEditor. Learn how to integrate enterprise-grade text editing capabilities (like rich text, real time collab, and image uploads) into your applications with minimal effort.
+
+Intrigued? [Go checkout the full course now! It's FREE!](https://vueschool.io/courses/google-docs-clone-with-ckeditor-in-30-minutes)
 
 ## Setup
 
-Make sure to install dependencies:
+Make sure to install the dependencies:
 
 ```bash
 # npm
@@ -29,7 +38,7 @@ Start the development server on `http://localhost:3000`:
 npm run dev
 
 # pnpm
-pnpm dev
+pnpm run dev
 
 # yarn
 yarn dev
@@ -47,7 +56,7 @@ Build the application for production:
 npm run build
 
 # pnpm
-pnpm build
+pnpm run build
 
 # yarn
 yarn build
@@ -63,7 +72,7 @@ Locally preview production build:
 npm run preview
 
 # pnpm
-pnpm preview
+pnpm run preview
 
 # yarn
 yarn preview
