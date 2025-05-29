@@ -598,6 +598,19 @@ function onReady(editor) {
 
   editorToolbar.value.appendChild(editor.ui.view.toolbar.element);
   editorMenuBar.value.appendChild(editor.ui.view.menuBarView.element);
+
+  const annotationsUIs = editor.plugins.get( 'AnnotationsUIs' );
+
+  function refreshDisplayMode() {
+    if ( window.innerWidth < 1115) {
+      annotationsUIs.switchTo( 'inline' );
+    } else {
+      annotationsUIs.switchTo( 'wideSidebar' );
+    }
+  }
+
+  editor.ui.view.listenTo( window, 'resize', refreshDisplayMode );
+  refreshDisplayMode();
 }
 
 /**
