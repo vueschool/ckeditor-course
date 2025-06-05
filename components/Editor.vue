@@ -13,6 +13,7 @@
           <div ref="editorElement">
             <ckeditor
               v-if="editor && config"
+              :key="annotationsSidebarInline"
               :model-value="config.initialData"
               :editor="editor"
               :config="config"
@@ -46,6 +47,13 @@
 
 import { computed, ref, onMounted, watchEffect, useTemplateRef } from "vue";
 import { Ckeditor, useCKEditorCloud } from "@ckeditor/ckeditor5-vue";
+import { useWindowSize } from "@vueuse/core";
+
+const { width: windowWidth } = useWindowSize();
+
+const annotationsSidebarInline = computed(() => {
+  return windowWidth.value <= 768;
+});
 
 const LICENSE_KEY = useRuntimeConfig().public.ckeditorLicenseKey;
 
@@ -201,7 +209,7 @@ const config = computed(() => {
     TrackChangesPreview,
   } = cloud.data.value.CKEditorPremiumFeatures;
 
-  return {
+  const baseConfig = {
     toolbar: {
       items: [
         "previousPage",
@@ -557,9 +565,6 @@ const config = computed(() => {
       viewerSidebarContainer: editorRevisionHistorySidebar.value,
       resumeUnsavedRevision: true,
     },
-    sidebar: {
-      container: editorAnnotations.value,
-    },
     table: {
       contentToolbar: [
         "tableColumn",
@@ -580,6 +585,15 @@ const config = computed(() => {
       ],
     },
   };
+
+  // Only add sidebar.container on desktop
+  if (!annotationsSidebarInline.value) {
+    baseConfig.sidebar = {
+      container: editorAnnotations.value,
+    };
+  }
+
+  return baseConfig;
 });
 
 onMounted(() => {
